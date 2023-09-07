@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoList.Api", "src\TodoLis
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoList.Front", "src\TodoList.Front\TodoList.Front.csproj", "{9B62E04C-613B-4B65-A865-DCF11A5DCD41}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoList.Shared", "src\TodoList.Shared\TodoList.Shared.csproj", "{9979ABCF-C05B-4088-827A-809CB93D646B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,9 +28,14 @@ Global
 		{9B62E04C-613B-4B65-A865-DCF11A5DCD41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B62E04C-613B-4B65-A865-DCF11A5DCD41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B62E04C-613B-4B65-A865-DCF11A5DCD41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9979ABCF-C05B-4088-827A-809CB93D646B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9979ABCF-C05B-4088-827A-809CB93D646B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9979ABCF-C05B-4088-827A-809CB93D646B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9979ABCF-C05B-4088-827A-809CB93D646B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{654190FD-9F9C-4805-A2A0-CB113EC39B10} = {CD68C41F-AE8B-4638-8F4B-09B921D3E111}
 		{9B62E04C-613B-4B65-A865-DCF11A5DCD41} = {CD68C41F-AE8B-4638-8F4B-09B921D3E111}
+		{9979ABCF-C05B-4088-827A-809CB93D646B} = {CD68C41F-AE8B-4638-8F4B-09B921D3E111}
 	EndGlobalSection
 EndGlobal
