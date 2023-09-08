@@ -1,0 +1,22 @@
+﻿@inject TaskService TaskService
+
+@foreach (var task in _tasks)
+{
+    <div class="task-item">
+        <h4>@task.Title</h4>
+        <span>@task.Description</span>
+    </div>
+}
+
+@code {
+
+    private IEnumerable<GetAllTaskResponse> _tasks = new List<GetAllTaskResponse>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        var res = await TaskService.GetAll();
+        if (res is { Success: true,Data: not null })
+            _tasks = res.Data;
+    }
+
+}

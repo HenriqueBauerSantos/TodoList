@@ -2,7 +2,7 @@
 
 namespace TodoList.Shared.DTOs;
 
-public class CreateTaskResponse
+public class GetAllTaskResponse
 {
     public required Guid Id { get; set; }
     public required string Title { get; set; }

@@ -1,7 +1,7 @@
 ﻿namespace TodoList.Shared.Enums;
 
-public enum TaskStatus
+public enum ETaskStatus
 {
     ToDo = 0,
-    finished
+    Finished = 1
 }

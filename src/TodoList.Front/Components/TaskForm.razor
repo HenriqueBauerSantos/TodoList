@@ -1,25 +1,32 @@
-﻿<div id="task-form">
-    <input @onkeydown="KeyDown" @bind="_text" @bind:event="oninput" id="input-text" placeholder="Write a new task // Write our description" type="text"/>
-    <input id="input-date" type="datetime-local" @bind="_deadline"/>
-    <div>
+﻿@inject TaskService TaskService
 
-        <span id="send">send</span>
+<div id="task-form">
+    <input @onkeydown="KeyDown" @bind="_request.Text" @bind:event="oninput" id="input-text" placeholder="Write a new task // Write our description" type="text"/>
+    <input id="input-date" type="datetime-local" @bind="_request.Deadline"/>
+    <div>
+        <button id="send">send</button>
+
     </div>
 </div>
 
 @code {
 
-    private string? _text;
-    private DateTime? _deadline;
+    private CreateTaskRequest _request = new CreateTaskRequest
+    {
+        Status = ETaskStatus.ToDo
+    };
 
-    private void KeyDown(KeyboardEventArgs args)
+    private async Task KeyDown(KeyboardEventArgs args)
     {
         if (args.Key != "Enter") return;
 
-        Console.WriteLine("Enteder");
+        var response = await TaskService.Create(_request);
 
-        _text = "";
-        _deadline = DateTime.Now;
+        if (!response.Success)
+            return;
+
+        _request.Text = "";
+        _request.Deadline = DateTime.Now;
     }
 
 }
