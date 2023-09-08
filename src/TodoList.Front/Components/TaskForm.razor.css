@@ -1,0 +1,32 @@
+﻿#task-form {
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    background-color: white;
+    width: 500px;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 6px 6px 6px #7777;
+}
+
+#task-form > #input-text {
+    min-height: 30px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    transition: min-height 0.1s;
+}
+
+#task-form > #input-text:focus {
+    min-height: 40px;
+}
+
+
+#task-form > #input-date {
+    width: 210px;
+    border: none;
+}
+
+#send {
+    margin-left: 5px;
+}

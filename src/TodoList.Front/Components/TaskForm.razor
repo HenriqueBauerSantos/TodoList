@@ -1,0 +1,25 @@
+﻿<div id="task-form">
+    <input @onkeydown="KeyDown" @bind="_text" @bind:event="oninput" id="input-text" placeholder="Write a new task // Write our description" type="text"/>
+    <input id="input-date" type="datetime-local" @bind="_deadline"/>
+    <div>
+
+        <span id="send">send</span>
+    </div>
+</div>
+
+@code {
+
+    private string? _text;
+    private DateTime? _deadline;
+
+    private void KeyDown(KeyboardEventArgs args)
+    {
+        if (args.Key != "Enter") return;
+
+        Console.WriteLine("Enteder");
+
+        _text = "";
+        _deadline = DateTime.Now;
+    }
+
+}
